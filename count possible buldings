@@ -1,0 +1,26 @@
+class Solution
+{
+    public int TotalWays(int N)
+    {   
+        long m=1000000007;
+        if( N==0 )
+            return 0;
+        else if( N==1)
+            return 4;
+        int i=1;
+        long  a=1;
+        long b=1;
+        long c=a+b;
+        while(i<N)
+        {
+            a=b%m;
+            b=c%m;
+            c=(a+b)%m;
+            i+=1;
+        }
+        long ans=(c*c)%1000000007;
+        int res=(int)ans;        
+        return res;
+        
+    }
+}
