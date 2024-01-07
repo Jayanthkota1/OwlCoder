@@ -1,0 +1,20 @@
+ public int singleNumber(int[] nums) {
+        int k=0,mask=0;
+        for(int i=0;i<32;i++)
+        {
+            int c=0;
+            for(int j=0;j<nums.length;j++)
+            {
+                mask=1;
+                if((nums[j]&(mask<<i))!=0)
+                {
+                    c+=1;
+                }
+            }
+            if(c%3!=0)
+            {
+                k=k|1<<i;
+            }
+        }
+        return k;
+    }
