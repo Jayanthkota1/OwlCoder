@@ -1,0 +1,21 @@
+static int countBits(int N, long A[])
+    {
+        long c=0;
+        for(int i=0;i<32;i++)
+        {
+            long z=0,o=0;
+            for(int j=0;j<N;j++)
+            {
+                if((A[j]&(1L<<i))!=0)
+                {
+                    o+=1;
+                }
+                else
+                {
+                    z+=1;
+                }
+            }
+            c+=(o*z);
+        }
+        return (int)((c*2)%1000000007);
+    }
