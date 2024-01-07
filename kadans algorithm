@@ -1,0 +1,18 @@
+long maxSubarraySum(int arr[], int n){
+        long max=-999,max_end=0;
+        for(int i=0;i<arr.length;i++)
+        {
+            max_end=max_end+arr[i];
+            if(max<max_end)
+            {
+                max=max_end;
+            }
+            if(max_end<0)
+            {
+                max_end=0;
+            }
+        }
+        return max;
+        
+        
+    }
