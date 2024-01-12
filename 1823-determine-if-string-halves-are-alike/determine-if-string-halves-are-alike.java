@@ -7,18 +7,16 @@ class Solution {
         int c=0,c1=0;
         for(int i=0,j=S.length()/2;i<S.length()/2;i++,j++)
         {
-            char ch=S.charAt(i);
-            if(isovel(ch))
+            if(isovel(S.charAt(i)))
             {
                 c+=1;
             }
-            char ch1=S.charAt(j);
-            if(isovel(ch1))
+            if(isovel(S.charAt(j)))
             {
                 c1+=1;
             }
         }
-        System.out.print(c+" "+c1);
+        //System.out.print(c+" "+c1);
         return(c==c1);
     }
 }
