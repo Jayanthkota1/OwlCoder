@@ -12,8 +12,8 @@ class Solution {
             {
                 c+=1;
             }
-            char ch1=S.charAt(j);
-            if(isovel(ch1))
+            ch=S.charAt(j);
+            if(isovel(ch))
             {
                 c1+=1;
             }
