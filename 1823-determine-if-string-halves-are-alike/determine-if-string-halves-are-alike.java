@@ -5,18 +5,15 @@ class Solution {
     }
     public boolean halvesAreAlike(String S) {
         int c=0,c1=0;
-        for(int i=0;i<S.length()/2;i++)
+        for(int i=0,j=S.length()/2;i<S.length()/2;i++,j++)
         {
             char ch=S.charAt(i);
             if(isovel(ch))
             {
                 c+=1;
             }
-        }
-         for(int i=S.length()/2;i<S.length();i++)
-        {
-            char ch=S.charAt(i);
-            if(isovel(ch))
+            char ch1=S.charAt(j);
+            if(isovel(ch1))
             {
                 c1+=1;
             }
