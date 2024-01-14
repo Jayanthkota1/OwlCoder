@@ -15,7 +15,11 @@ class Solution {
         }
         Arrays.sort(a);
         Arrays.sort(b);
-        return Arrays.equals(a,b);
-        }        
+        for(int i=0;i<27;i++)
+        {
+            if(a[i]!=b[i])return false;
+        }
+        return true;
+        }      
 }
 }
