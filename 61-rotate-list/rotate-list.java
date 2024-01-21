@@ -36,7 +36,6 @@ class Solution {
             head=n2;
             n1=n2;
         } 
-        System.gc();
         return n1;
     }
 }
