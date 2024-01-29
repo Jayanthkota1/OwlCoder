@@ -1,9 +1,11 @@
 class Solution {
     void fun(ArrayList<List<Integer>> a,ArrayList<Integer>a1,int start,int[] nums){
-        if(a.contains(a1)) return;
         a.add(new ArrayList<Integer>(a1));
         for(int i=start;i<nums.length;i++)
         {
+            if (i > start && nums[i - 1] == nums[i]) {
+                continue;
+            }
               a1.add(nums[i]);
               fun(a,a1,i+1,nums);
               a1.remove(a1.size()-1);
