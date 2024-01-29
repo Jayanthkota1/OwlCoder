@@ -1,7 +1,7 @@
 class Solution {
     void fun(int op,int cl,int n,String s,ArrayList<String> a)
     {
-        if(op==n && cl==n)
+        if(cl==n)
         {
             a.add(s);
             return;
@@ -11,8 +11,7 @@ class Solution {
     }
     public List<String> generateParenthesis(int n) {
         ArrayList<String> a=new ArrayList<>();
-        String s="";
-        fun(0,0,n,s,a);
+        fun(0,0,n,"",a);
         return a;
     }
 }
