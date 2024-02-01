@@ -1,5 +1,8 @@
 class Solution {
     public int[][] divideArray(int[] nums, int k) {
+        if (nums.length % 3 != 0) {
+            return new int[0][0];
+        }
         Arrays.sort(nums);
         //int n=(nums.length%3)+3;
         int m=(nums.length/3);
@@ -16,8 +19,8 @@ class Solution {
             }
             if(b==1) break;
         }
-        int c[][]=new int[0][0]; 
-        if(b==1) return c; 
+ //       int c[][]=new int[0][0]; 
+        if(b==1) return new int[0][0]; 
         return a;
     }
 }
