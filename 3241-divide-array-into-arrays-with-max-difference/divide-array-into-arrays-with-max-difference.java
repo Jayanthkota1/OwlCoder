@@ -9,14 +9,11 @@ class Solution {
                     if(l==m) return a;
                     a[i][j]=nums[l++];
                     if(j>0 && a[i][j]-a[i][0]>k){
-                        b=1;
-                        break;
+                        return new int[0][0];
                     }
             }
-            if(b==1) break;
         }
  //       int c[][]=new int[0][0]; 
-        if(b==1) return new int[0][0]; 
         return a;
     }
 }
