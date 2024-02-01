@@ -1,8 +1,5 @@
 class Solution {
     public int[][] divideArray(int[] nums, int k) {
-        if (nums.length % 3 != 0) {
-            return new int[0][0];
-        }
         Arrays.sort(nums);
         int m=nums.length;
         int[][] a=new int[m/3][3];
