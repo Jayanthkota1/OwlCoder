@@ -4,13 +4,12 @@ class Solution {
             return new int[0][0];
         }
         Arrays.sort(nums);
-        //int n=(nums.length%3)+3;
-        int m=(nums.length/3);
-        int[][] a=new int[m][3];
+        int m=nums.length;
+        int[][] a=new int[m/3][3];
         int l=0,b=0;
         for(int i=0;i<m;i++){
             for(int j=0;j<3;j++){
-                    if(l==nums.length) return a;
+                    if(l==m) return a;
                     a[i][j]=nums[l++];
                     if(j>0 && a[i][j]-a[i][0]>k){
                         b=1;
