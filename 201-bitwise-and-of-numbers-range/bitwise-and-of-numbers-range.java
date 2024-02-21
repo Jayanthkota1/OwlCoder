@@ -5,30 +5,18 @@ class Solution {
         {
             return left;
         }
-        for(int i=31;i>=0;i--)
-        {
-            if((left&(1<<i))!=0)
-            {
-                c=i;
-                break;
-            }
-        }
-        for(int j=31;j>=0;j--)
-        {
-            if((right&(1<<j))!=0)
-            {
-                c1=j;
-                break;
-            }
-        }
+        c=(int)(Math.log(left)/Math.log(2))+1;
+        c1=(int)(Math.log(right)/Math.log(2))+1;
         long res=0;
         if(c==c1)
         {
-            res=left;
-            for(long k=left+1;k<=right;k++)
-            {
-                res&=k;
-            }
+           res=left;
+           if(right-left<(int)Math.pow(2,c-1)) {
+                for(long i=left+1;i<=right;i++){
+                    res&=i;
+                }
+           }
+           else return 0;
         }
         return (int)res;
     }
