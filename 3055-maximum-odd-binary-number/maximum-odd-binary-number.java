@@ -1,21 +1,24 @@
+import java.util.Arrays;
+
 class Solution {
     public String maximumOddBinaryNumber(String s) {
-        //StringBuffer s1=new StringBuffer();
-        int c=0;
-        for(int i=s.length()-1;i>=0;i--){
-           if(s.charAt(i)=='1'){
-                c+=1;
-           }  
-        }
-        String s1="";
-        for(int i=0;i<s.length()-1;i++){
-            if(c>1){
-                s1+="1";
-                c--;
+        int count1=0;
+       // char[] chars = s.toCharArray();
+        for(int i=0;i<s.length();i++){
+            if(s.charAt(i)=='1'){
+                count1++;
             }
-            else s1+="0";
         }
-        s1+="1";
-        return s1;
+        char a[]=new char[s.length()];
+        a[s.length()-1]='1';
+        for(int i=0;i<s.length()-1;i++){
+            if(count1>1){
+                a[i]='1';
+                count1--;
+            }else{
+                a[i]='0';
+            }
+        }
+        return new String(a);
     }
 }
