@@ -9,7 +9,7 @@ class Solution {
        // System.out.print(max+"\n");
         for(int i=0;i<101;i++){
              if(freq[i]==max) c+=max;
-             //System.out.print(freq[i]+" "+i+"\n");
+             System.out.print(freq[i]+" "+i+"\n");
         }
         return c;
     }
