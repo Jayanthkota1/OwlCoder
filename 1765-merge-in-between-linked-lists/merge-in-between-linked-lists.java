@@ -17,11 +17,8 @@ class Solution {
             if(b-->0) n1=n1.next;
         }
         n.next=list2;
-        if(list2==null) n.next=n1.next;
-        else{
         while(list2.next!=null) list2=list2.next;
         list2.next=n1.next;
-        }
         return list1;
     }
 }
