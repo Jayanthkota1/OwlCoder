@@ -46,14 +46,13 @@ class Solution {
                   n=0;
                   m=0;
                }
-             System.out.println(n+" "+m+" "+max+" "+c);
+            // System.out.println(n+" "+m+" "+max+" "+c);
         }
         max=Math.max(max,c);
         if(k==0)
         {
             return -1;
         }
-
         return max+1;
     }
 }
