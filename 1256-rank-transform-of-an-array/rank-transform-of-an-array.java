@@ -4,7 +4,7 @@ class Solution {
         {
             return arr;
         }
-        int num[]=Arrays.copyOfRange(arr,0,arr.length);
+        int num[]=arr.clone();
         HashMap<Integer,Integer> map = new HashMap<>();
         Arrays.sort(num);
         map.put(num[0],1);
